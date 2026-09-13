@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
           {/* Column 1: Brand & Identity (5 cols) */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <Logo isLight={true} className="mb-4" />
+            <Logo size="md" className="mb-4" />
             <p className="text-white/80 font-semibold text-base mt-2">
               {INSTRUCTOR.tagline}
             </p>
