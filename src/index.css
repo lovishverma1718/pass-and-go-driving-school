@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 215 32% 12%;
+  --navy: 216 44% 13%;
+  --navy-deep: 218 48% 8%;
+  --navy-soft: 216 28% 20%;
+  --gold: 45 100% 51%;
+  --gold-deep: 39 92% 44%;
+  --gold-soft: 45 100% 94%;
+  --surface: 0 0% 100%;
+  --surface-muted: 216 24% 96%;
+  --muted: 216 12% 43%;
+  --muted-light: 216 12% 62%;
+  --border: 216 18% 87%;
+  --border-dark: 216 24% 22%;
+  --white: 0 0% 100%;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FAFAFA;
+  color: #101C2C;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.14), 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.liquid-glass-dark {
+  background: rgba(8, 20, 33, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08), 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.road-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(247, 198, 0, 0.7),
+    transparent
+  );
+}
+
+.lane-dash {
+  width: 42px;
+  height: 2px;
+  background: #F7C600;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07111D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2E46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F7C600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
