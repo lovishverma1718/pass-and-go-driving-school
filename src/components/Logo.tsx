@@ -9,15 +9,15 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className = '', size = 'sm' }) => {
   const imgSizes = {
-    sm: 'h-7 sm:h-8 md:h-9 w-auto',
-    md: 'h-9 sm:h-10 md:h-11 w-auto',
-    lg: 'h-12 sm:h-14 w-auto',
+    sm: 'h-14 sm:h-16 md:h-[68px] w-auto',
+    md: 'h-16 sm:h-[72px] md:h-20 w-auto',
+    lg: 'h-20 sm:h-24 w-auto',
   };
 
   const containerPadding = {
-    sm: 'px-2 py-1 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl',
-    md: 'px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-xl',
-    lg: 'px-4 py-2 rounded-2xl',
+    sm: 'px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl',
+    md: 'px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl',
+    lg: 'px-5 py-3 rounded-2xl',
   };
 
   return (
