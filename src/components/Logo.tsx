@@ -6,35 +6,25 @@ interface LogoProps {
   isLight?: boolean;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = '', isLight = false }) => {
+export const Logo: React.FC<LogoProps> = ({ className = '' }) => {
   return (
     <Link
       to="/"
-      className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7C600] rounded-lg transition-transform duration-200 hover:scale-[1.02] ${className}`}
+      className={`inline-flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7C600] rounded-xl transition-transform duration-200 hover:scale-[1.02] ${className}`}
       aria-label="Pass ’N’ Go Driving School - Safe Driving. Confident Future."
     >
-      <picture>
-        <source srcSet="/images/logo.webp" type="image/webp" />
-        <img
-          src="/images/logo.png"
-          alt="Pass ’N’ Go Driving School Logo"
-          className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-opacity duration-300"
-          width="170"
-          height="54"
-          loading="eager"
-        />
-      </picture>
-      <div className="hidden sm:flex flex-col text-left">
-        <span
-          className={`text-xs md:text-sm font-extrabold tracking-tight uppercase leading-tight ${
-            isLight ? 'text-white' : 'text-[#101C2C]'
-          }`}
-        >
-          Pass ’N’ Go
-        </span>
-        <span className="text-[9px] md:text-[10px] uppercase tracking-[0.14em] font-semibold text-[#F7C600]">
-          Driving School
-        </span>
+      <div className="bg-white px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl shadow-sm border border-white/20 group-hover:border-[#F7C600]/60 transition-all duration-200 flex items-center justify-center">
+        <picture>
+          <source srcSet="/images/logo.webp" type="image/webp" />
+          <img
+            src="/images/logo.png"
+            alt="Pass ’N’ Go Driving School Logo"
+            className="w-[125px] sm:w-[145px] md:w-[165px] h-auto object-contain transition-opacity duration-200"
+            width="165"
+            height="106"
+            loading="eager"
+          />
+        </picture>
       </div>
     </Link>
   );

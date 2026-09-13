@@ -160,8 +160,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
-          className="fixed inset-0 z-40 bg-[#07111D] flex flex-col justify-between px-6 pt-24 pb-8 md:hidden animate-fade-in"
+          className="fixed inset-0 z-50 bg-[#07111D] flex flex-col justify-between px-6 pt-5 pb-8 md:hidden animate-fade-in overflow-y-auto"
         >
+          {/* Mobile Top Header with Brand Logo and Close Button */}
+          <div className="flex items-center justify-between pb-4 border-b border-white/10">
+            <Logo isLight={true} />
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="p-2 rounded-full text-white bg-white/10 hover:bg-white/15 transition-colors focus:outline-none focus:ring-2 focus:ring-[#F7C600]"
+              aria-label="Close Navigation Menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
           {/* Subtle lane mark decorative background */}
           <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7C600]/20 to-transparent pointer-events-none" />
 
